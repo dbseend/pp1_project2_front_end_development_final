@@ -1,0 +1,77 @@
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#btnDiv {
+    margin-top: 10px;
+}
+
+#navbar {
+    margin-right: 20px;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+/* 추가된 스타일 */
+.navbar-nav {
+    flex-direction: row;
+    /* 네비게이션 항목을 가로로 나열합니다. */
+}
+
+.nav-item {
+    margin-right: 10px;
+    /* 네비게이션 항목 간 간격을 조정합니다. */
+}
+
+.navbar-toggler {
+    display: none;
+    /* 화면 폭이 좁을 때 햄버거 아이콘 숨깁니다. */
+}
+
+@media (max-width: 767px) {
+    .navbar-nav {
+        flex-direction: column;
+        /* 화면 폭이 좁을 때 세로로 나열합니다. */
+    }
+
+    .navbar-toggler {
+        display: block;
+        /* 화면 폭이 좁을 때 햄버거 아이콘 표시합니다. */
+    }
+
+    .navbar-collapse {
+        text-align: center;
+        /* 네비게이션 항목을 가운데 정렬합니다. */
+    }
+
+    .nav-item {
+        margin-right: 0;
+        /* 화면 폭이 좁을 때 간격을 없앱니다. */
+        margin-bottom: 10px;
+        /* 세로로 나열된 항목 간 간격을 조정합니다. */
+    }
+
+    /* 네비게이션 바 배경색을 변경합니다. */
+    .navbar {
+        background-color: #fff;
+    }
+
+    /* 네비게이션 바 항목을 보이도록 수정합니다. */
+    .navbar-collapse.collapse {
+        display: block !important;
+    }
+}
