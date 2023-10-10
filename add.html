@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+
+    <title>Cheatsheet · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cheatsheet/">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="cheatsheet.css" rel="stylesheet">
+
+    <script>
+        function addItem() {
+            var itemType = document.getElementById("itemType").value;
+            var itemName = document.getElementById("itemName").value;
+            var itemPrice = parseInt(document.getElementById("itemPrice").value);
+            var itemQuantity = parseInt(document.getElementById("itemQuantity").value);
+            console.log(itemPrice, itemQuantity);
+
+            if (itemType == '') {
+                alert("품목을 입력하세요");
+                document.getElementById("itemType").focus();
+                return;
+            }
+            if (itemName == '') {
+                alert("상품명을 입력하세요");
+                document.getElementById("itemName").focus();
+                return;
+            } if (itemPrice <= 0) {
+                alert("가격은 0원 보다 커야합니다.");
+                document.getElementById("itemPrice").focus();
+                return;
+            } if (itemQuantity <= 0) {
+                alert("수량은 0보다 커야합니다.");
+                document.getElementById("itemQuantity").focus();
+                return;
+            }
+
+            alert("상품이 등록되었습니다.");
+
+            document.addForm.submit();
+        }
+    </script>
+</head>
+
+<body class="bg-light">
+    <div>
+        <h1>상품 정보 등록 페이지</h1>
+        <form name="addForm" method="post">
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">품목</label>
+                <input type="text" class="form-control" id="itemType" placeholder="Example input placeholder">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">상품명</label>
+                <input type="text" class="form-control" id="itemName" placeholder="Example input placeholder">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">상품가격</label>
+                <input type="text" class="form-control" id="itemPrice" placeholder="Another input placeholder">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">상품물량</label>
+                <input type="text" class="form-control" id="itemQuantity" placeholder="Another input placeholder">
+            </div>
+
+        </form>
+        <button onclick="addItem" class="btn" id="btnDiv">상품 등록하기</button>
+        <button onclick="location.href='index.html'" class="btn" id="btnDiv">홈으로가기</button>
+    </div>
+
+
+</body>
+
+</html>

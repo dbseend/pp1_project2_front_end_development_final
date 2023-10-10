@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Cheatsheet · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cheatsheet/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="cheatsheet.css" rel="stylesheet">
+
+    <script>
+        function editItem() {
+            location.href = 'edit.html'
+        }
+
+        function deleteItem() {
+            if (!confirm("상품 정보를 삭제하겠습니까?")) {
+                alert("취소하였습니다.");
+            } else {
+                alert("상품 정보를 삭제하였습니다.");
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-light">
+    <div>
+        <h1>상품 상세 페이지</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">상품번호</th>
+                    <th scope="col">품목</th>
+                    <th scope="col">상품명</th>
+                    <th scope="col">상품가격</th>
+                    <th scope="col">재고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>생필품</td>
+                    <td>대용량 로션</td>
+                    <td>42,250</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="editItem()" class="btn" id="btnDiv">상품 정보 수정</button>
+        <button onclick="deleteItem()" class="btn" id="btnDiv">상품 정보 삭제</button>
+        <button onclick="location.href='index.html'" class="btn" id="btnDiv">홈으로가기</button>
+    </div>
+</body>

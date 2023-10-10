@@ -1,0 +1,9 @@
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#btnDiv {
+    margin-top: 10px;
+}
